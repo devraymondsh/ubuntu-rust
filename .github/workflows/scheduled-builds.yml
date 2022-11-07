@@ -1,0 +1,24 @@
+name: Check for newer versions of Rust and update
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    name: Check for newer versions of Rust and update
+    runs-on: ubuntu-latest
+    container:
+      image: devraymondsh/ubuntu-docker-rust:latest
+    steps:
+      - name: Install git
+        run: apt-get install --yes git
+      
+      - name: Clone the repository
+        run: git clone https://github.com/devraymondsh/ubuntu-docker-rust
+
+      - name: Run the script
+        run: ./ubuntu-docker-rust/check-for-update/check-for-update.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN_FOR_GITHUB }}

@@ -1,0 +1,41 @@
+name: Build the _UBUNTU_RELEASE_VERSION_ Docker images
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup QEMU
+        id: qemu
+        uses: docker/setup-qemu-action@v2
+        with:
+          platforms: linux/amd64,linux/arm64,linux/armhf
+
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
+
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v3
+        with:
+          platforms: linux/amd64,linux/arm64,linux/armhf
+          push: true
+          file: dockerfiles/_UBUNTU_RELEASE_CODENAME_/Dockerfile
+          tags: _DOCKER_IMAGE_TAGS_
+
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
