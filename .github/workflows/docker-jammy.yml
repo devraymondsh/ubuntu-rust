@@ -3,6 +3,7 @@ name: Build the 22.04 Docker images
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -34,7 +35,7 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/armhf
           push: true
           file: dockerfiles/jammy/Dockerfile
-          tags: devraymondsh/ubuntu-docker-rust:22.04, devraymondsh/ubuntu-docker-rust:22.04-1.65, devraymondsh/ubuntu-docker-rust:jammy, devraymondsh/ubuntu-docker-rust:jammy-1.65, devraymondsh/ubuntu-docker-rust:jammy-latest
+          tags: devraymondsh/ubuntu-docker-rust:22.04,devraymondsh/ubuntu-docker-rust:22.04-1.66,devraymondsh/ubuntu-docker-rust:22.04-latest,devraymondsh/ubuntu-docker-rust:jammy,devraymondsh/ubuntu-docker-rust:jammy-1.66,devraymondsh/ubuntu-docker-rust:jammy-latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

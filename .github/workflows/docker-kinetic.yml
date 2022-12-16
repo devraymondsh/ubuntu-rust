@@ -3,6 +3,7 @@ name: Build the 22.10 Docker images
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -34,7 +35,7 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/armhf
           push: true
           file: dockerfiles/kinetic/Dockerfile
-          tags: devraymondsh/ubuntu-docker-rust:1.65, devraymondsh/ubuntu-docker-rust:22.10, devraymondsh/ubuntu-docker-rust:22.10-1.65, devraymondsh/ubuntu-docker-rust:22.10-latest, devraymondsh/ubuntu-docker-rust:kinetic, devraymondsh/ubuntu-docker-rust:kinetic-1.65, devraymondsh/ubuntu-docker-rust:kinetic-latest, devraymondsh/ubuntu-docker-rust:latest, devraymondsh/ubuntu-docker-rust:latest-1.65
+          tags: devraymondsh/ubuntu-docker-rust:22.10,devraymondsh/ubuntu-docker-rust:22.10-1.66,devraymondsh/ubuntu-docker-rust:22.10-latest,devraymondsh/ubuntu-docker-rust:kinetic,devraymondsh/ubuntu-docker-rust:kinetic-1.66,devraymondsh/ubuntu-docker-rust:kinetic-latest,devraymondsh/ubuntu-docker-rust:1.66,devraymondsh/ubuntu-docker-rust:latest,devraymondsh/ubuntu-docker-rust:latest-1.66
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
