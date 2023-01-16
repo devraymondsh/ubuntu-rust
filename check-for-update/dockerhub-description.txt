@@ -1,0 +1,8 @@
+# Important indentation! This file is going to be appended to a workflow.
+
+      - name: Update dockerhub description
+        uses: peter-evans/dockerhub-description@v3
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
+          repository: devraymondsh/ubuntu-docker-rust
