@@ -12,6 +12,9 @@ jobs:
     container:
       image: devraymondsh/ubuntu-docker-rust:latest
     steps:
+      - name: Update system
+        run: apt-get update && apt-get --yes upgrade
+
       - name: Install git
         run: apt-get install --yes git
       
