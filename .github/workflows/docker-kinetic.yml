@@ -39,7 +39,6 @@ jobs:
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
-
       - name: Update dockerhub description
         uses: peter-evans/dockerhub-description@v3
         with:
