@@ -43,4 +43,4 @@ There may be occasions where it is not appropriate to run your app inside a cont
 This will add your current directory, as a volume, to the container, set the working directory to the volume, and run the command cargo build --release. This tells Cargo, Rust's build system, to compile the crate in myapp and output the executable to target/release/myapp.
 
 ## License
-The image is licensed under the GPL-3.0 license. Visit [LICENSE](https://github.com/devraymondsh/ubuntu-docker-rust/blob/main/LICENSE) for more information.
+The image is licensed under the MIT license. Visit [LICENSE](https://github.com/devraymondsh/ubuntu-docker-rust/blob/main/LICENSE) for more information.
