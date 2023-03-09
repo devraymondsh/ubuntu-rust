@@ -1,8 +1,8 @@
 #### A Rust docker image built on top of Ubuntu Linux.
 ## Supported tags:
-- 1.67, 22.10, 22.10-1.67, 22.10-latest, kinetic, kinetic-1.67, kinetic-latest, latest-1.67, latest
-- 22.04, 22.04-1.67, jammy-1.67, jammy-latest, jammy
-- 20.04, 20.04-1.67, focal-1.67, focal-latest, focal
+- 1.68, 22.10, 22.10-1.68, 22.10-latest, kinetic, kinetic-1.68, kinetic-latest, latest-1.68, latest
+- 22.04, 22.04-1.68, jammy-1.68, jammy-latest, jammy
+- 20.04, 20.04-1.68, focal-1.68, focal-latest, focal
 
 ## How to use this image
 ### Start a Rust instance running your app
