@@ -1,4 +1,4 @@
-name: Build the _UBUNTU_RELEASE_VERSION_ Docker images
+name: Build the _UBUNTU_RELEASE_VERSION_ Docker image
 
 on:
   push:

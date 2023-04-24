@@ -1,4 +1,4 @@
-name: Build the 22.10 Docker image
+name: Build the 23.04 Docker image
 
 on:
   push:
@@ -34,8 +34,8 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64,linux/armhf
           push: true
-          file: dockerfiles/kinetic/Dockerfile
-          tags: devraymondsh/ubuntu-rust:22.10,devraymondsh/ubuntu-rust:22.10-1.69,devraymondsh/ubuntu-rust:22.10-latest,devraymondsh/ubuntu-rust:kinetic,devraymondsh/ubuntu-rust:kinetic-1.69,devraymondsh/ubuntu-rust:kinetic-latest
+          file: dockerfiles/lunar/Dockerfile
+          tags: devraymondsh/ubuntu-rust:23.04,devraymondsh/ubuntu-rust:23.04-1.69,devraymondsh/ubuntu-rust:23.04-latest,devraymondsh/ubuntu-rust:lunar,devraymondsh/ubuntu-rust:lunar-1.69,devraymondsh/ubuntu-rust:lunar-latest,devraymondsh/ubuntu-rust:1.69,devraymondsh/ubuntu-rust:latest,devraymondsh/ubuntu-rust:latest-1.69
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

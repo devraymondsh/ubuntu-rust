@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ubuntu-docker-rust
+cd ubuntu-rust
 
 apt-get install --yes libssl-dev pkg-config git
 cargo install rust-latest
@@ -28,7 +28,7 @@ git config --global user.email "github-actions@github.com"
 git config --global --add safe.directory $(realpath .)
 
 function workflow_creator {
-    local repo="devraymondsh/ubuntu-docker-rust"
+    local repo="devraymondsh/ubuntu-rust"
     local rust_version="$1"
     local ubuntu_codename="$2"
     local ubuntu_version="$3"
@@ -36,24 +36,24 @@ function workflow_creator {
 
     local tags=""
 
-    # e.g: devraymondsh/ubuntu-docker-rust:22.10
-    # e.g: devraymondsh/ubuntu-docker-rust:22.10-1.66
+    # e.g: devraymondsh/ubuntu-rust:22.10
+    # e.g: devraymondsh/ubuntu-rust:22.10-1.66
     tags+="$repo:$ubuntu_version,$repo:$ubuntu_version-$rust_version,"
 
-    # e.g: devraymondsh/ubuntu-docker-rust:22.10-latest
-    # e.g: devraymondsh/ubuntu-docker-rust:kinetic
+    # e.g: devraymondsh/ubuntu-rust:22.10-latest
+    # e.g: devraymondsh/ubuntu-rust:kinetic
     tags+="$repo:$ubuntu_version-latest,$repo:$ubuntu_codename,"
 
-    # e.g: devraymondsh/ubuntu-docker-rust:kinetic-1.66
-    # e.g: devraymondsh/ubuntu-docker-rust:kinetic-latest,
+    # e.g: devraymondsh/ubuntu-rust:kinetic-1.66
+    # e.g: devraymondsh/ubuntu-rust:kinetic-latest,
     tags+="$repo:$ubuntu_codename-$rust_version,$repo:$ubuntu_codename-latest"
 
     local workflow=${WORKFLOW_SAMPLE//_UBUNTU_RELEASE_VERSION_/$ubuntu_version}
 
     if $is_the_latest; then
-        # e.g: devraymondsh/ubuntu-docker-rust:1.66,
-        # e.g: devraymondsh/ubuntu-docker-rust:latest, 
-        # e.g: devraymondsh/ubuntu-docker-rust:latest-1.66
+        # e.g: devraymondsh/ubuntu-rust:1.66,
+        # e.g: devraymondsh/ubuntu-rust:latest, 
+        # e.g: devraymondsh/ubuntu-rust:latest-1.66
         tags+=",$repo:$rust_version,$repo:latest,$repo:latest-$rust_version"
 
         workflow+=$DOCKERHUB_DESCRIPTION_UPDATER
@@ -65,7 +65,8 @@ function workflow_creator {
     local file_destination=".github/workflows/docker-$ubuntu_codename.yml"
     echo "$workflow" > "$file_destination"
 }
-workflow_creator "$LATEST_NO_MINOR_RUST_VERSION" "kinetic" "22.10" true
+workflow_creator "$LATEST_NO_MINOR_RUST_VERSION" "lunar" "23.04" true
+workflow_creator "$LATEST_NO_MINOR_RUST_VERSION" "kinetic" "22.10" false
 workflow_creator "$LATEST_NO_MINOR_RUST_VERSION" "jammy" "22.04" false
 workflow_creator "$LATEST_NO_MINOR_RUST_VERSION" "focal" "20.04" false
 
@@ -81,4 +82,4 @@ echo "$LATEST_RUST_VERSION" > "check-for-update/version.txt"
 
 git add .
 git commit -m "Add rust v$LATEST_RUST_VERSION"
-git push "https://devraymondsh:$GITHUB_TOKEN@github.com/devraymondsh/ubuntu-docker-rust.git"
+git push "https://devraymondsh:$GITHUB_TOKEN@github.com/devraymondsh/ubuntu-rust.git"

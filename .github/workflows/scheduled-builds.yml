@@ -2,7 +2,7 @@ name: Check for newer versions of Rust and update
 
 on:
   schedule:
-    - cron: '0 8 * * *'
+    - cron: "0 8 * * *"
   workflow_dispatch:
 
 jobs:
@@ -10,18 +10,18 @@ jobs:
     name: Check for newer versions of Rust and update
     runs-on: ubuntu-latest
     container:
-      image: devraymondsh/ubuntu-docker-rust:latest
+      image: devraymondsh/ubuntu-rust:latest
     steps:
       - name: Update system
         run: apt-get update && apt-get --yes upgrade
 
       - name: Install git
         run: apt-get install --yes git
-      
+
       - name: Clone the repository
-        run: git clone https://github.com/devraymondsh/ubuntu-docker-rust
+        run: git clone https://github.com/devraymondsh/ubuntu-rust
 
       - name: Run the script
-        run: ./ubuntu-docker-rust/check-for-update/check-for-update.sh
+        run: ./ubuntu-rust/check-for-update/check-for-update.sh
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN_FOR_GITHUB }}
