@@ -2,10 +2,10 @@
 
 ## Supported tags:
 
-- 23.04, 23.04-1.69, lunar-1.69, lunar-latest, lunar, 23.04-latest, latest-1.69, 1.69, latest
-- 22.10, 22.10-1.69, kinetic-1.69, kinetic-latest, kinetic
-- 22.04, 22.04-1.69, jammy-1.69, jammy-latest, jammy
-- 20.04, 20.04-1.69, focal-1.69, focal-latest, focal
+- 23.04, 23.04-1.70, lunar-1.70, lunar-latest, lunar, 23.04-latest, latest-1.70, 1.70, latest
+- 22.10, 22.10-1.70, kinetic-1.70, kinetic-latest, kinetic
+- 22.04, 22.04-1.70, jammy-1.70, jammy-latest, jammy
+- 20.04, 20.04-1.70, focal-1.70, focal-latest, focal
 
 ## How to use this image
 
