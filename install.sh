@@ -5,7 +5,7 @@ echo "check_certificate = off" >> ~/.wgetrc
 apt-get update && apt-get install --yes --no-install-recommends apt-utils ca-certificates &&
     apt-get --yes upgrade && apt-get install --yes --no-install-recommends sudo build-essential wget curl
 
-DEFAULT_RUST_VERSION=1.71.1
+DEFAULT_RUST_VERSION=1.72.0
 DEFAULT_RUSTUP_VERSION=1.25.2
 RUST_VERSION=${1:-$DEFAULT_RUST_VERSION}
 RUSTUP_VERSION=${2:-$DEFAULT_RUSTUP_VERSION}

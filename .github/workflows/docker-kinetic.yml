@@ -35,7 +35,7 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/armhf
           push: true
           file: dockerfiles/kinetic/Dockerfile
-          tags: devraymondsh/ubuntu-rust:22.10,devraymondsh/ubuntu-rust:22.10-1.71,devraymondsh/ubuntu-rust:22.10-latest,devraymondsh/ubuntu-rust:kinetic,devraymondsh/ubuntu-rust:kinetic-1.71,devraymondsh/ubuntu-rust:kinetic-latest
+          tags: devraymondsh/ubuntu-rust:22.10,devraymondsh/ubuntu-rust:22.10-1.72,devraymondsh/ubuntu-rust:22.10-latest,devraymondsh/ubuntu-rust:kinetic,devraymondsh/ubuntu-rust:kinetic-1.72,devraymondsh/ubuntu-rust:kinetic-latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
