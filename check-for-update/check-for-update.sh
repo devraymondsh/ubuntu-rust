@@ -36,16 +36,16 @@ function workflow_creator {
 
     local tags=""
 
-    # e.g: devraymondsh/ubuntu-rust:22.10
-    # e.g: devraymondsh/ubuntu-rust:22.10-1.66
+    # e.g: devraymondsh/ubuntu-rust:23.04
+    # e.g: devraymondsh/ubuntu-rust:23.04-1.66
     tags+="$repo:$ubuntu_version,$repo:$ubuntu_version-$rust_version,"
 
-    # e.g: devraymondsh/ubuntu-rust:22.10-latest
-    # e.g: devraymondsh/ubuntu-rust:kinetic
+    # e.g: devraymondsh/ubuntu-rust:23.04-latest
+    # e.g: devraymondsh/ubuntu-rust:lunar
     tags+="$repo:$ubuntu_version-latest,$repo:$ubuntu_codename,"
 
-    # e.g: devraymondsh/ubuntu-rust:kinetic-1.66
-    # e.g: devraymondsh/ubuntu-rust:kinetic-latest,
+    # e.g: devraymondsh/ubuntu-rust:lunar-1.66
+    # e.g: devraymondsh/ubuntu-rust:lunar-latest,
     tags+="$repo:$ubuntu_codename-$rust_version,$repo:$ubuntu_codename-latest"
 
     local workflow=${WORKFLOW_SAMPLE//_UBUNTU_RELEASE_VERSION_/$ubuntu_version}
@@ -66,7 +66,6 @@ function workflow_creator {
     echo "$workflow" > "$file_destination"
 }
 workflow_creator "$LATEST_NO_MINOR_RUST_VERSION" "lunar" "23.04" true
-workflow_creator "$LATEST_NO_MINOR_RUST_VERSION" "kinetic" "22.10" false
 workflow_creator "$LATEST_NO_MINOR_RUST_VERSION" "jammy" "22.04" false
 workflow_creator "$LATEST_NO_MINOR_RUST_VERSION" "focal" "20.04" false
 

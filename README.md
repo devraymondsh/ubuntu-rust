@@ -3,7 +3,6 @@
 ## Supported tags:
 
 - 23.04, 23.04-1.72, lunar-1.72, lunar-latest, lunar, 23.04-latest, latest-1.72, 1.72, latest
-- 22.10, 22.10-1.72, kinetic-1.72, kinetic-latest, kinetic
 - 22.04, 22.04-1.72, jammy-1.72, jammy-latest, jammy
 - 20.04, 20.04-1.72, focal-1.72, focal-latest, focal
 
