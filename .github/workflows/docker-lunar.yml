@@ -35,7 +35,7 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/armhf
           push: true
           file: dockerfiles/lunar/Dockerfile
-          tags: devraymondsh/ubuntu-rust:23.04,devraymondsh/ubuntu-rust:23.04-1.72,devraymondsh/ubuntu-rust:23.04-latest,devraymondsh/ubuntu-rust:lunar,devraymondsh/ubuntu-rust:lunar-1.72,devraymondsh/ubuntu-rust:lunar-latest,devraymondsh/ubuntu-rust:1.72,devraymondsh/ubuntu-rust:latest,devraymondsh/ubuntu-rust:latest-1.72
+          tags: devraymondsh/ubuntu-rust:23.04,devraymondsh/ubuntu-rust:23.04-1.73,devraymondsh/ubuntu-rust:23.04-latest,devraymondsh/ubuntu-rust:lunar,devraymondsh/ubuntu-rust:lunar-1.73,devraymondsh/ubuntu-rust:lunar-latest,devraymondsh/ubuntu-rust:1.73,devraymondsh/ubuntu-rust:latest,devraymondsh/ubuntu-rust:latest-1.73
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
