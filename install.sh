@@ -6,7 +6,7 @@ apt-get update && apt-get install --yes --no-install-recommends apt-utils ca-cer
     apt-get --yes upgrade && apt-get install --yes --no-install-recommends sudo build-essential wget curl
 
 DEFAULT_RUST_VERSION=1.78.0
-DEFAULT_RUSTUP_VERSION=1.25.2
+DEFAULT_RUSTUP_VERSION=1.27.0
 RUST_VERSION=${1:-$DEFAULT_RUST_VERSION}
 RUSTUP_VERSION=${2:-$DEFAULT_RUSTUP_VERSION}
 
@@ -16,19 +16,19 @@ dpkgArch="$(dpkg --print-architecture)"
 case "${dpkgArch##*-}" in
 amd64)
     rustArch='x86_64-unknown-linux-gnu'
-    rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c'
+    rustupSha256='a3d541a5484c8fa2f1c21478a6f6c505a778d473c21d60a18a4df5185d320ef8'
     ;;
 armhf)
     rustArch='armv7-unknown-linux-gnueabihf'
-    rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f'
+    rustupSha256='7cff34808434a28d5a697593cd7a46cefdf59c4670021debccd4c86afde0ff76'
     ;;
 arm64)
     rustArch='aarch64-unknown-linux-gnu'
-    rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74'
+    rustupSha256='76cd420cb8a82e540025c5f97bda3c65ceb0b0661d5843e6ef177479813b0367'
     ;;
 i386)
     rustArch='i686-unknown-linux-gnu'
-    rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607'
+    rustupSha256='cacdd10eb5ec58498cd95dbb7191fdab5fa4343e05daaf0fb7cdcae63be0a272'
     ;;
 *)
     echo >&2 "unsupported architecture: ${dpkgArch}"

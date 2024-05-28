@@ -2,7 +2,8 @@
 
 ## Supported tags:
 
-- 23.04, 23.04-1.78, lunar-1.78, lunar-latest, lunar, 23.04-latest, latest-1.78, 1.78, latest
+- 24.04, 24.04-1.78, noble-1.78, noble-latest, noble, 24.04-latest, latest-1.78, 1.78, latest
+- 23.04, 23.04-1.78, lunar-1.78, lunar-latest, lunar
 - 22.04, 22.04-1.78, jammy-1.78, jammy-latest, jammy
 - 20.04, 20.04-1.78, focal-1.78, focal-latest, focal
 

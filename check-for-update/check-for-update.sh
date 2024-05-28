@@ -65,7 +65,9 @@ function workflow_creator {
     local file_destination=".github/workflows/docker-$ubuntu_codename.yml"
     echo "$workflow" > "$file_destination"
 }
-workflow_creator "$LATEST_NO_MINOR_RUST_VERSION" "lunar" "23.04" true
+
+workflow_creator "$LATEST_NO_MINOR_RUST_VERSION" "noble" "24.04" true
+workflow_creator "$LATEST_NO_MINOR_RUST_VERSION" "lunar" "23.04" false
 workflow_creator "$LATEST_NO_MINOR_RUST_VERSION" "jammy" "22.04" false
 workflow_creator "$LATEST_NO_MINOR_RUST_VERSION" "focal" "20.04" false
 
