@@ -35,11 +35,10 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/armhf
           push: true
           file: dockerfiles/noble/Dockerfile
-          tags: devraymondsh/ubuntu-rust:24.04,devraymondsh/ubuntu-rust:24.04-1.78,devraymondsh/ubuntu-rust:24.04-latest,devraymondsh/ubuntu-rust:noble,devraymondsh/ubuntu-rust:noble-1.78,devraymondsh/ubuntu-rust:noble-latest,devraymondsh/ubuntu-rust:1.78,devraymondsh/ubuntu-rust:latest,devraymondsh/ubuntu-rust:latest-1.78
+          tags: devraymondsh/ubuntu-rust:24.04,devraymondsh/ubuntu-rust:24.04-1.79,devraymondsh/ubuntu-rust:24.04-latest,devraymondsh/ubuntu-rust:noble,devraymondsh/ubuntu-rust:noble-1.79,devraymondsh/ubuntu-rust:noble-latest,devraymondsh/ubuntu-rust:1.79,devraymondsh/ubuntu-rust:latest,devraymondsh/ubuntu-rust:latest-1.79
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
-
       - name: Update dockerhub description
         uses: peter-evans/dockerhub-description@v3
         with:
