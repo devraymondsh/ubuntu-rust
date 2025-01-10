@@ -2,10 +2,10 @@
 
 ## Supported tags:
 
-- 24.04, 24.04-1.83, noble-1.83, noble-latest, noble, 24.04-latest, latest-1.83, 1.83, latest
-- 23.04, 23.04-1.83, lunar-1.83, lunar-latest, lunar
-- 22.04, 22.04-1.83, jammy-1.83, jammy-latest, jammy
-- 20.04, 20.04-1.83, focal-1.83, focal-latest, focal
+- 24.04, 24.04-1.84, noble-1.84, noble-latest, noble, 24.04-latest, latest-1.84, 1.84, latest
+- 23.04, 23.04-1.84, lunar-1.84, lunar-latest, lunar
+- 22.04, 22.04-1.84, jammy-1.84, jammy-latest, jammy
+- 20.04, 20.04-1.84, focal-1.84, focal-latest, focal
 
 ## How to use this image
 
