@@ -35,7 +35,7 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/armhf
           push: true
           file: dockerfiles/resolute/Dockerfile
-          tags: mahdisharifithedev/ubuntu-rust:26.04,mahdisharifithedev/ubuntu-rust:26.04-1.96,mahdisharifithedev/ubuntu-rust:26.04-latest,mahdisharifithedev/ubuntu-rust:resolute,mahdisharifithedev/ubuntu-rust:resolute-1.96,mahdisharifithedev/ubuntu-rust:resolute-latest,mahdisharifithedev/ubuntu-rust:1.96,mahdisharifithedev/ubuntu-rust:latest,mahdisharifithedev/ubuntu-rust:latest-1.96
+          tags: mahdisharifithedev/ubuntu-rust:26.04,mahdisharifithedev/ubuntu-rust:26.04-1.97,mahdisharifithedev/ubuntu-rust:26.04-latest,mahdisharifithedev/ubuntu-rust:resolute,mahdisharifithedev/ubuntu-rust:resolute-1.97,mahdisharifithedev/ubuntu-rust:resolute-latest,mahdisharifithedev/ubuntu-rust:1.97,mahdisharifithedev/ubuntu-rust:latest,mahdisharifithedev/ubuntu-rust:latest-1.97
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

@@ -2,10 +2,10 @@
 
 ## Supported tags:
 
-- 26.04, 26.04-1.96, resolute-1.96, resolute-latest, resolute, 26.04-latest, latest-1.96, 1.96, latest
-- 24.04, 24.04-1.96, noble-1.96, noble-latest, noble
-- 22.04, 22.04-1.96, jammy-1.96, jammy-latest, jammy
-- 20.04, 20.04-1.96, focal-1.96, focal-latest, focal
+- 26.04, 26.04-1.97, resolute-1.97, resolute-latest, resolute, 26.04-latest, latest-1.97, 1.97, latest
+- 24.04, 24.04-1.97, noble-1.97, noble-latest, noble
+- 22.04, 22.04-1.97, jammy-1.97, jammy-latest, jammy
+- 20.04, 20.04-1.97, focal-1.97, focal-latest, focal
 
 ## How to use this image
 
