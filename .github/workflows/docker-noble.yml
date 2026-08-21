@@ -35,7 +35,7 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/armhf
           push: true
           file: dockerfiles/noble/Dockerfile
-          tags: mahdisharifithedev/ubuntu-rust:24.04,mahdisharifithedev/ubuntu-rust:24.04-1.97,mahdisharifithedev/ubuntu-rust:24.04-latest,mahdisharifithedev/ubuntu-rust:noble,mahdisharifithedev/ubuntu-rust:noble-1.97,mahdisharifithedev/ubuntu-rust:noble-latest
+          tags: mahdisharifithedev/ubuntu-rust:24.04,mahdisharifithedev/ubuntu-rust:24.04-1.98,mahdisharifithedev/ubuntu-rust:24.04-latest,mahdisharifithedev/ubuntu-rust:noble,mahdisharifithedev/ubuntu-rust:noble-1.98,mahdisharifithedev/ubuntu-rust:noble-latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

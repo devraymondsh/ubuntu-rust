@@ -35,7 +35,7 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/armhf
           push: true
           file: dockerfiles/jammy/Dockerfile
-          tags: mahdisharifithedev/ubuntu-rust:22.04,mahdisharifithedev/ubuntu-rust:22.04-1.97,mahdisharifithedev/ubuntu-rust:22.04-latest,mahdisharifithedev/ubuntu-rust:jammy,mahdisharifithedev/ubuntu-rust:jammy-1.97,mahdisharifithedev/ubuntu-rust:jammy-latest
+          tags: mahdisharifithedev/ubuntu-rust:22.04,mahdisharifithedev/ubuntu-rust:22.04-1.98,mahdisharifithedev/ubuntu-rust:22.04-latest,mahdisharifithedev/ubuntu-rust:jammy,mahdisharifithedev/ubuntu-rust:jammy-1.98,mahdisharifithedev/ubuntu-rust:jammy-latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

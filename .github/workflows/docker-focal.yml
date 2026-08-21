@@ -35,7 +35,7 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/armhf
           push: true
           file: dockerfiles/focal/Dockerfile
-          tags: mahdisharifithedev/ubuntu-rust:20.04,mahdisharifithedev/ubuntu-rust:20.04-1.97,mahdisharifithedev/ubuntu-rust:20.04-latest,mahdisharifithedev/ubuntu-rust:focal,mahdisharifithedev/ubuntu-rust:focal-1.97,mahdisharifithedev/ubuntu-rust:focal-latest
+          tags: mahdisharifithedev/ubuntu-rust:20.04,mahdisharifithedev/ubuntu-rust:20.04-1.98,mahdisharifithedev/ubuntu-rust:20.04-latest,mahdisharifithedev/ubuntu-rust:focal,mahdisharifithedev/ubuntu-rust:focal-1.98,mahdisharifithedev/ubuntu-rust:focal-latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
